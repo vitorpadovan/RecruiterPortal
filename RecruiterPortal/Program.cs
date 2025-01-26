@@ -1,4 +1,7 @@
 
+using Microsoft.EntityFrameworkCore;
+using RecruiterPortal.Repository;
+
 namespace RecruiterPortal
 {
     public class Program
@@ -12,6 +15,9 @@ namespace RecruiterPortal
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
+            builder.Services.AddDbContext<AppDbContext>(opt =>
+                opt.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSql"))
+            );
 
             var app = builder.Build();
 
