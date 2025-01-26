@@ -1,6 +1,10 @@
 
 using Microsoft.EntityFrameworkCore;
+using RecruiterPortal.Business.Implementation;
+using RecruiterPortal.Business.Interfaces;
 using RecruiterPortal.Repository;
+using RecruiterPortal.Repository.Implementation;
+using RecruiterPortal.Repository.Interfaces;
 
 namespace RecruiterPortal
 {
@@ -18,6 +22,11 @@ namespace RecruiterPortal
             builder.Services.AddDbContext<AppDbContext>(opt =>
                 opt.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSql"))
             );
+
+            #region Injeção de Dependências
+            builder.Services.AddScoped<IApplicationRepo, ApplicationRepo>();
+            builder.Services.AddScoped<IApplicationBusiness, ApplicationBusiness>();
+            #endregion
 
             var app = builder.Build();
 
