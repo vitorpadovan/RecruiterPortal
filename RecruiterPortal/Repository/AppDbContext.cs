@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RecruiterPortal.Model;
+using RecruiterPortal.Repository.Cfg;
 
 namespace RecruiterPortal.Repository
 {
@@ -12,6 +13,12 @@ namespace RecruiterPortal.Repository
 
         protected AppDbContext()
         {
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfiguration(new ApplicationCfg());
         }
     }
 }

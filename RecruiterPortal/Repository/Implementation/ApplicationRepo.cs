@@ -6,15 +6,24 @@ namespace RecruiterPortal.Repository.Implementation
 {
     public class ApplicationRepo : BaseRepo<JobApplicationModel>, IApplicationRepo
     {
-        public ApplicationRepo(AppDbContext context) : base(context,x=>x.JobApplication)
+        private readonly ILogger<ApplicationRepo> _logger;
+        public ApplicationRepo(AppDbContext context, ILogger<ApplicationRepo> logger) : base(context, x => x.JobApplication)
         {
+            _logger = logger;
         }
 
         public async Task<JobApplicationModel> SaveApplication(JobApplicationModel newApplicationRequest)
         {
-            var result = await _dbSet.AddAsync(newApplicationRequest);
-            await _context.SaveChangesAsync();
-            return result.Entity;
+            try
+            {
+                var result = await _dbSet.AddAsync(newApplicationRequest);
+                await _context.SaveChangesAsync();
+                return result.Entity;
+            }catch(Exception ex){
+                _logger.LogError(ex, "Erro ao tentar salvar o job  {jobCompany} com a URL {url}", newApplicationRequest.CompanyName, newApplicationRequest.JobDescriptionUrl);
+                throw;
+            }
+            
         }
     }
 }
