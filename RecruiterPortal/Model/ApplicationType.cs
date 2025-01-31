@@ -1,6 +1,6 @@
 ﻿namespace RecruiterPortal.Model
 {
-    public enum ApplicationTypeEnum
+    public enum ApplicationType
     {
         DM, External, Linkedin
     }

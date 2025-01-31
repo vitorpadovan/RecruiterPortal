@@ -19,8 +19,6 @@ namespace RecruiterPortal.Business.Implementation
         {
             newApplicationRequest.Id = Guid.NewGuid();
             newApplicationRequest.ApplicationData = newApplicationRequest.ApplicationData.ToUniversalTime();
-            var teste = newApplicationRequest.ApplicationData.Kind;
-
 
             return _applicationRepo.SaveApplication(newApplicationRequest);
         }

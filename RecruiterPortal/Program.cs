@@ -8,7 +8,7 @@ using RecruiterPortal.Repository.Interfaces;
 
 namespace RecruiterPortal
 {
-    public class Program
+    static class Program
     {
         public static void Main(string[] args)
         {

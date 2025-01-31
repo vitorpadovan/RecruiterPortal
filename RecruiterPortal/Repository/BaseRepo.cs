@@ -7,7 +7,7 @@ namespace RecruiterPortal.Repository
         protected DbSet<TEntity> _dbSet;
         protected readonly AppDbContext _context;
 
-        public BaseRepo(AppDbContext context, Func<AppDbContext, DbSet<TEntity>> func)
+        protected BaseRepo(AppDbContext context, Func<AppDbContext, DbSet<TEntity>> func)
         {
             _context = context;
             _dbSet = func.Invoke(context);

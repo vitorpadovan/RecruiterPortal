@@ -11,7 +11,7 @@ namespace RecruiterPortal.Model
         public Uri? ContactUrl { get; set; }
         public required DateTime ApplicationData { get; set; }
         public required Uri JobDescriptionUrl { get; set; }
-        public ApplicationTypeEnum ApplicationType { get; set; }
+        public ApplicationType ApplicationType { get; set; }
         public Uri? ApplicationUrl { get; set; }
 
 
