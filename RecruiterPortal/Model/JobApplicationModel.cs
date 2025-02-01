@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.ApplicationModels;
-using RecruiterPortal.Controllers.Request.Application;
-using RecruiterPortal.Controllers.Response.Application;
+﻿using RecruiterPortal.Controllers.Request.Application;
 
 namespace RecruiterPortal.Model
 {
@@ -17,7 +15,8 @@ namespace RecruiterPortal.Model
 
         public static implicit operator JobApplicationModel(NewApplicationRequest v)
         {
-            return new() { 
+            return new()
+            {
                 ApplicationData = DateTime.Now.ToUniversalTime(),
                 CompanyName = v.CompanyName,
                 JobDescriptionUrl = v.JobDescriptionUrl,

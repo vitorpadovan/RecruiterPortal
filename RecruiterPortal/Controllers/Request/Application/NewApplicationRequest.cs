@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.ApplicationModels;
-using RecruiterPortal.Model;
+﻿using RecruiterPortal.Model;
 
 namespace RecruiterPortal.Controllers.Request.Application
 {

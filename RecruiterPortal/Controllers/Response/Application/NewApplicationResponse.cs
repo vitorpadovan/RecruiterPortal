@@ -1,5 +1,4 @@
-﻿using RecruiterPortal.Controllers.Request.Application;
-using RecruiterPortal.Model;
+﻿using RecruiterPortal.Model;
 
 namespace RecruiterPortal.Controllers.Response.Application
 {

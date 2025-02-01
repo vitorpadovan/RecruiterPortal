@@ -7,7 +7,7 @@ namespace RecruiterPortal.Repository.Cfg
     {
         public override void ConfigureColumns(EntityTypeBuilder<JobApplicationModel> builder)
         {
-            
+
         }
 
         public override void ConfigureIndex(EntityTypeBuilder<JobApplicationModel> builder)
@@ -19,12 +19,12 @@ namespace RecruiterPortal.Repository.Cfg
 
         public override void ConfigureKeys(EntityTypeBuilder<JobApplicationModel> builder)
         {
-            
+
         }
 
         public override void ConfigureTable(EntityTypeBuilder<JobApplicationModel> builder)
         {
-            
+
         }
     }
 }

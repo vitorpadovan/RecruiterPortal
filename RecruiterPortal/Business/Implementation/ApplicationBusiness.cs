@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.ApplicationModels;
-using RecruiterPortal.Business.Interfaces;
-using RecruiterPortal.Controllers.Request.Application;
+﻿using RecruiterPortal.Business.Interfaces;
 using RecruiterPortal.Model;
 using RecruiterPortal.Repository.Interfaces;
 

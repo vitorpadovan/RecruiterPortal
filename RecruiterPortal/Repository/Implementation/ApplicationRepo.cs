@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using RecruiterPortal.Model;
+﻿using RecruiterPortal.Model;
 using RecruiterPortal.Repository.Interfaces;
 
 namespace RecruiterPortal.Repository.Implementation
