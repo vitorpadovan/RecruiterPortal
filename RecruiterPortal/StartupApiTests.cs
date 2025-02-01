@@ -1,4 +1,6 @@
-﻿namespace RecruiterPortal
+﻿using RecruiterPortal.Repository;
+
+namespace RecruiterPortal
 {
     public class StartupApiTests
     {
@@ -16,8 +18,26 @@
             services.AddControllers();
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory, AppDbContext context)
         {
+            try
+            {
+                context.Database.EnsureDeleted();
+            }
+            catch
+            {
+
+            }
+
+            try
+            {
+                context.Database.EnsureCreated();
+            }
+            catch
+            {
+
+            }
+            
             app.UseCors(builder => builder
             .AllowAnyOrigin()
             .AllowAnyMethod()
@@ -29,7 +49,5 @@
                 endpoints.MapControllers();
             });
         }
-
-
     }
 }
