@@ -31,21 +31,6 @@
             {
                 endpoints.MapControllers();
             });
-
-            app.Use(async (context, next) =>
-            {
-                var endpointDataSource = context.RequestServices.GetRequiredService<EndpointDataSource>();
-                var endpoints = endpointDataSource.Endpoints;
-                foreach (var endpoint in endpoints)
-                {
-                    var routeEndpoint = endpoint as RouteEndpoint;
-                    if (routeEndpoint != null)
-                    {
-                        Console.WriteLine($"Endpoint: {routeEndpoint.RoutePattern.RawText}");
-                    }
-                }
-                await next.Invoke();
-            });
         }
 
 
