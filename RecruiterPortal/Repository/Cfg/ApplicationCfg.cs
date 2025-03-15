@@ -8,13 +8,13 @@ namespace RecruiterPortal.Repository.Cfg
     {
         public override void ConfigureColumns(EntityTypeBuilder<JobApplicationModel> builder)
         {
-            builder.Property(x => x.ApplicationType).HasColumnName("APPLICATIONTYPE");
-            builder.Property(x => x.ApplicationUrl).HasColumnName("APPLICATIONURL");
-            builder.Property(x => x.ContactUrl).HasColumnName("CONTACTURL");
-            builder.Property(x => x.JobDescriptionUrl).HasColumnName("JOBDESCRIPTIONURL");
-            builder.Property(x => x.ApplicationData).HasColumnName("APPLICATIONDATA");
-            builder.Property(x => x.CompanyName).HasColumnName("COMPANYNAME");
-            builder.Property(x => x.Id).HasColumnName("ID");
+            builder.Property(x => x.ApplicationType).HasColumnName("applicationtype");
+            builder.Property(x => x.ApplicationUrl).HasColumnName("applicationurl");
+            builder.Property(x => x.ContactUrl).HasColumnName("contacturl");
+            builder.Property(x => x.JobDescriptionUrl).HasColumnName("jobdescriptionurl");
+            builder.Property(x => x.ApplicationData).HasColumnName("applicationdata");
+            builder.Property(x => x.CompanyName).HasColumnName("companyname");
+            builder.Property(x => x.Id).HasColumnName("id");
         }
 
         public override void ConfigureIndex(EntityTypeBuilder<JobApplicationModel> builder)
@@ -31,7 +31,7 @@ namespace RecruiterPortal.Repository.Cfg
 
         public override void ConfigureTable(EntityTypeBuilder<JobApplicationModel> builder)
         {
-            builder.ToTable("JOBAPPLICATION");
+            builder.ToTable("jobapplication");
         }
     }
 }

@@ -15,7 +15,7 @@ namespace RecruiterPortal.Repository.Implementation
         {
             return await _dbSet
                 .AsNoTracking()
-                .OrderBy(x=>x.Id)
+                .OrderBy(x=>x.ApplicationDate)
                 .ToListAsync();
         }
 

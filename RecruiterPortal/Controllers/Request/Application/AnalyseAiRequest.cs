@@ -11,6 +11,8 @@ namespace RecruiterPortal.Controllers.Request.Application
         public string? RecruterName { get; set; }
         public Uri? RecruterUrl { get; set; }
         public string? Competence { get; set; }
+        public string? CompanyName { get; set; }
+        public Uri? CompanyUrl { get; set; }
 
         public static implicit operator AnaliseAiDataModel(AnalyseAiRequest v)
         {
@@ -22,6 +24,8 @@ namespace RecruiterPortal.Controllers.Request.Application
                 JobDescriptionUrl = v.JobDescriptionUrl,
                 RecruterName = v.RecruterName,
                 RecruterUrl = v.RecruterUrl,
+                CompanyName = v.CompanyName,
+                CompanyUrl = v.CompanyUrl,
                 Competence = v.Competence,
                 ApplicationDate = DateTime.Now.ToUniversalTime()
             };

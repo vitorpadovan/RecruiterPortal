@@ -8,17 +8,17 @@ namespace RecruiterPortal.Repository.Cfg
     {
         public override void ConfigureColumns(EntityTypeBuilder<AnaliseAiDataModel> builder)
         {
-            builder.Property(x => x.RecruterUrl).HasColumnName("RECRUTERURL");
-            builder.Property(x => x.RecruterName).HasColumnName("RECRUTERNAME");
-            builder.Property(x => x.Competence).HasColumnName("COMPETENCE");
-            builder.Property(x => x.Type).HasColumnName("TYPE");
-            builder.Property(x => x.ApplicationDate).HasColumnName("APPLICATIONDATE");
-            builder.Property(x => x.ApplicationUrl).HasColumnName("APPLICATIONURL");
-            builder.Property(x => x.CompanyName).HasColumnName("COMPANYNAME");
-            builder.Property(x => x.CompanyUrl).HasColumnName("COMPANYURL");
-            builder.Property(x => x.Description).HasColumnName("DESCRIPTION");
-            builder.Property(x => x.Id).HasColumnName("ID");
-            builder.Property(x => x.JobDescriptionUrl).HasColumnName("JOBDESCRIPTIONURL");
+            builder.Property(x => x.RecruterUrl).HasColumnName("recruterurl");
+            builder.Property(x => x.RecruterName).HasColumnName("recrutername");
+            builder.Property(x => x.Competence).HasColumnName("competence");
+            builder.Property(x => x.Type).HasColumnName("type");
+            builder.Property(x => x.ApplicationDate).HasColumnName("applicationdate");
+            builder.Property(x => x.ApplicationUrl).HasColumnName("applicationurl");
+            builder.Property(x => x.CompanyName).HasColumnName("companyname");
+            builder.Property(x => x.CompanyUrl).HasColumnName("companyurl");
+            builder.Property(x => x.Description).HasColumnName("description");
+            builder.Property(x => x.Id).HasColumnName("id");
+            builder.Property(x => x.JobDescriptionUrl).HasColumnName("jobdescriptionurl");
         }
 
         public override void ConfigureIndex(EntityTypeBuilder<AnaliseAiDataModel> builder)
@@ -33,7 +33,7 @@ namespace RecruiterPortal.Repository.Cfg
 
         public override void ConfigureTable(EntityTypeBuilder<AnaliseAiDataModel> builder)
         {
-            builder.ToTable("ANALISEAIDATA");
+            builder.ToTable("analiseaidata");
         }
     }
 }
