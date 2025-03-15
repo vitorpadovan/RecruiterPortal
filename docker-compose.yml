@@ -1,0 +1,6 @@
+services:
+  recruiterportal:
+    image: ${DOCKER_REGISTRY-}recruiterportal
+    build:
+      context: .
+      dockerfile: RecruiterPortal/Dockerfile

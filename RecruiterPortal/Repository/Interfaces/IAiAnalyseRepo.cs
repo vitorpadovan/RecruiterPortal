@@ -3,9 +3,9 @@ using RecruiterPortal.Model;
 
 namespace RecruiterPortal.Repository.Interfaces
 {
-    public interface IApplicationRepo
+    public interface IAiAnalyseRepo
     {
+        Task<List<AnaliseAiDataModel>> GetAnaliseAiData();
         Task SaveAiAnalyse(AnalyseAiRequest newAiAnalyse);
-        Task<JobApplicationModel> SaveApplication(JobApplicationModel newApplicationRequest);
     }
 }

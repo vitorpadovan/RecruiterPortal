@@ -1,4 +1,5 @@
-﻿using RecruiterPortal.Model;
+﻿using RecruiterPortal.Controllers.Request.Application;
+using RecruiterPortal.Model;
 using RecruiterPortal.Repository.Interfaces;
 
 namespace RecruiterPortal.Repository.Implementation
@@ -9,6 +10,11 @@ namespace RecruiterPortal.Repository.Implementation
         public ApplicationRepo(AppDbContext context, ILogger<ApplicationRepo> logger) : base(context, x => x.JobApplication)
         {
             _logger = logger;
+        }
+
+        public Task SaveAiAnalyse(AnalyseAiRequest newAiAnalyse)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task<JobApplicationModel> SaveApplication(JobApplicationModel newApplicationRequest)
